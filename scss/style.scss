@@ -1,0 +1,146 @@
+//Mixins
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+}
+
+@mixin anim($time, $delay) {
+    -moz-transition: all $time ease $delay;
+    -webkit-transition: all $time ease $delay;
+    -ms-transition: all $time ease $delay;
+    -o-transition: all $time ease $delay;
+    transition: all $time ease $delay;
+}
+
+@mixin scale1($num) {
+    -moz-transform: scale($num);
+    -webkit-transform: scale($num);
+    -ms-transform: scale($num);
+    -o-transform: scale($num);
+    transform: scale($num);
+}
+
+@mixin rotate1($deg) {
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+//Шрифты
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@font-face {
+    font-family: "AkzidenzGroteskBQ-BdCnd";
+    src: url("../fonts/AkzidenzGrotesk-BoldCond.eot");
+    src: local("☺"), url("../fonts/AkzidenzGrotesk-BoldCond.woff") format("woff"), url("../fonts/AkzidenzGrotesk-BoldCond.ttf") format("truetype"), url("../fonts/AkzidenzGrotesk-BoldCond.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Шрифт по умолчанию
+$fontfamily: "PT Sans";
+//Переменные
+$minwidth: 320px;
+$mv: 880;
+$md1: $mv+12;
+$md2: 767.98;
+$md4: 479.98;
+//--------------------
+//ОСНОВНАЯ СЕТКА
+.container {
+    max-width: $mv + px;
+    margin: 0 auto; //централизация основной сетки
+    width: 100%;
+    @media (max-width: $md1 + px) {
+        max-width: 750px;
+    }
+    @media (max-width: $md2+px) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+//Кнопки и форми
+.btn {
+    height: 50px;
+    background-color: #000;
+    font-family: "Bebas Neue";
+    font-size: 15px;
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    padding: 0px 33px;
+    &-white {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input {
+    border-radius: 0 !important;
+    width: 100%;
+    display: block;
+    padding: 0px 18px 0px 18px;
+    border: 2px solid #959595;
+    height: 50px;
+    background-color: #252525;
+    font-size: 15px;
+    color: #959595;
+    &:hover::-webkit-input-placeholder {
+        color: transparent;
+    }
+    &:hover::-moz-placeholder {
+        color: transparent;
+    }
+    &:hover:-moz-placeholder {
+        color: transparent;
+    }
+    &:hover:-ms-input-placeholder {
+        color: transparent;
+    }
+    // &:invalid {
+    //     border: 2px solid red;
+    // }
+    // &:valid {
+    //     border: 2px solid #959595;
+    // }
+}
+
+textarea.input {
+    resize: none;
+    height: 100px;
+    padding: 18px;
+}
+
+//for images
+.ibg {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.ibg img {
+    display: none;
+}
+
+//import files
+@import "_header";
+@import "_nullstyle";
+@import "_content";
+@import "_footer";

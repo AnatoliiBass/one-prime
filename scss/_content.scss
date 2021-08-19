@@ -1,0 +1,379 @@
+//First block
+.private {
+    @include flexbox();
+    background-color: #000;
+    margin: 0px 0px 75px 0px;
+    @media (max-width: $md2+px) {
+        margin: 0px 0px 40px 0px;
+    }
+}
+
+.private-column {
+    flex: 0 0 50%;
+    @media (max-width: $md2+px) {
+        flex: 1 1 100%;
+        &:first-child {
+            display: none;
+        }
+    }
+}
+
+.private-image {
+    height: 100%;
+}
+
+.private-body {
+    padding: 75px 20px 75px 60px;
+    @media (max-width: $md1+px) {
+        padding: 30px 20px 30px 30px;
+    }
+}
+
+.private-body-content {
+    max-width: 305px;
+}
+
+.private-body-title {
+    margin: 0px 0px 30px 0px;
+    font-family: "AkzidenzGroteskBQ-BdCnd";
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #ffffff;
+    @media (max-width: $md1+px) {
+        font-size: 35px;
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+.private-body-text {
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+    margin: 0px 0px 50px 0px;
+    @media (max-width: $md1+px) {
+        margin: 0px 0px 30px 0px;
+    }
+}
+
+.private-body-buttons {
+    @include flexbox();
+    align-items: center;
+}
+
+.private-body-buttons-link {
+    font-family: "Bebas Neue";
+    font-size: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    margin: 0px 0px 0px 15px;
+}
+
+//Second block
+.products {
+    margin: 0px 0px 40px 0px;
+    @media (max-width: $md2+px) {
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.products-body {
+    @include flexbox();
+    @media (max-width: $md2+px) {
+        flex-wrap: wrap;
+    }
+}
+
+.products-colmn {
+    flex: 0 0 25%;
+    margin: 0px 0px 40px 0px;
+    @media (max-width: $md2+px) {
+        flex: 0 0 50%;
+    }
+    @media (max-width: 380px) {
+        flex: 1 1 100%;
+    }
+}
+
+.products-item {
+    @include flexbox();
+    height: 100%;
+    flex-direction: column;
+}
+
+.products-item-image {
+    display: block;
+    padding: 0px 0px 100% 0px;
+    margin: 0px 0px 25px 0px;
+    @media (max-width: 380px) {
+        margin: 0px 0px 15px 0px;
+    }
+}
+
+.prodcts-item-title {
+    height: 50px;
+    overflow: hidden;
+    max-width: 185px;
+    padding: 0px 10px 0px 0px;
+    display: block;
+    margin: 0px 0px 30px 0px;
+    font-family: "AkzidenzGroteskBQ-BdCnd";
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #000000;
+    @media (max-width: 380px) {
+        max-width: none;
+        height: auto;
+        overflow: visible;
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+.products-item-text {
+    flex: 1 1 auto;
+    max-width: 185px;
+    padding: 0px 10px 0px 0px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+    margin: 0px 0px 25px 0px;
+    @media (max-width: 380px) {
+        max-width: none;
+        margin: 0px 0px 15px 0px;
+    }
+}
+
+.products-item-btn {
+    margin: 0px 0px 29px 0px;
+}
+
+.products-item-link {
+    padding: 0px 0px 0px 5px;
+    font-family: "Bebas Neue";
+    font-size: 15px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #000000;
+}
+
+//Third block
+.why-top {
+    @include flexbox();
+    background-color: #000000;
+}
+
+.why-top-column {
+    flex: 0 0 50%;
+    @media (max-width: $md1+px) {
+        flex: 1 1 100%;
+        &:last-child {
+            display: none;
+        }
+    }
+}
+
+.why-top-text {
+    text-align: right;
+    font-family: "AkzidenzGroteskBQ-BdCnd";
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #ffffff;
+    padding: 55px 60px 55px 0px;
+    @media (max-width: $md1+px) {
+        padding: 30px 0px 30px 0px;
+        font-size: 40px;
+        text-align: center;
+    }
+    @media (max-width: $md2+px) {
+        padding: 20px 0px 20px 0px;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.why-top-image {
+    height: 100%;
+}
+
+.why-body {
+    background-color: #ebebeb;
+    padding: 50px 0px 0px 0px;
+    @media (max-width: $md4+px) {
+        padding: 30px 0px 0px 0px;
+    }
+}
+
+.why-body-row {
+    @include flexbox();
+    flex-wrap: wrap;
+}
+
+.why-body-column {
+    flex: 0 0 50%;
+    margin: 0px 0px 50px 0px;
+    @media (max-width: $md1+px) {
+        flex: 1 1 100%;
+    }
+    @media (max-width: $md4+px) {
+        margin: 0px 0px 30px 0px;
+    }
+}
+
+.why-body-item {
+    @include flexbox();
+}
+
+.why-body-item-icon {
+    flex: 0 0 100px;
+    height: 100px;
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    @media (max-width: $md4+px) {
+        padding: 15px 15px 15px 15px;
+        flex: 0 0 80px;
+        height: 80px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.why-body-item-body {
+    flex: 1 1 100%;
+    @include flexbox();
+    flex-direction: column;
+    padding: 0px 0px 0px 11px;
+}
+
+.why-body-item-body-title {
+    flex: 1 1 auto;
+    font-family: "AkzidenzGroteskBQ-BdCnd";
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #000000;
+    @media (max-width: $md4+px) {
+        font-size: 20px;
+    }
+}
+
+.why-body-item-body-text {
+    padding: 0px 15px 0px 0px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+}
+
+//Forth block - last block
+.contacts {
+    padding: 80px 0px 0px 0px;
+    @media (max-width: $md2+px) {
+        padding: 30px 0px 0px 0px;
+    }
+}
+
+.contacts-title {
+    font-family: "AkzidenzGroteskBQ-BdCnd";
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #000000;
+    margin: 0px 0px 30px 0px;
+}
+
+.contacts-body {
+    @include flexbox();
+    flex-wrap: wrap;
+}
+
+.contacts-body-column {
+    flex: 0 0 50%;
+    margin: 0px 0px 20px 0px;
+    @media (max-width: $md2+px) {
+        flex: 1 1 100%;
+    }
+}
+
+.contacts-body-item {
+    color: #000000;
+    font-size: 15px;
+    line-height: 27px;
+    display: inline-block;
+    padding: 0px 0px 0px 35px;
+}
+
+.contacts-body-item-location {
+    background: url("/img/icons/location.png") left no-repeat;
+}
+
+.contacts-body-item-mail {
+    background: url("/img/icons/email.png") left no-repeat;
+}
+
+.contacts-body-item-tel {
+    background: url("/img/icons/telephone.png") left no-repeat;
+}
+
+.contacts-social {
+    @include flexbox();
+}
+
+.contacts-social-item {
+    margin: 0px 30px 0px 0px;
+    &:last-child {
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.contacts-content {
+    @include flexbox();
+    background-color: #000000;
+    @media (max-width: $md2+px) {
+        display: block;
+    }
+}
+
+.contacts-content-column {
+    flex: 1 1 50%;
+}
+
+.contacts-content-map {
+    height: 100%;
+    @media (max-width: $md2+px) {
+        height: 300px;
+    }
+}
+
+.contacts-content-form {
+    padding: 55px 60px;
+    @media (max-width: $md2+px) {
+        padding: 30px;
+    }
+}
+
+.contacts-content-form-title {
+    margin: 0px 0px 30px 0px;
+    font-family: "AkzidenzGroteskBQ-BdCnd";
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #ffffff;
+}
+
+.contacts-content-form-body {
+    max-width: 375px;
+    @media (max-width: $md2+px) {
+        max-width: none;
+    }
+}
+
+.contacts-content-form-line {
+    margin: 0px 0px 25px 0px;
+}

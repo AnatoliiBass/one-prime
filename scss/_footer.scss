@@ -1,0 +1,33 @@
+.footer-body {
+    @include flexbox();
+    height: 125px;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $md2+px) {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 15px 0px;
+    }
+}
+
+.footer-body-column {
+    @media (max-width: $md2+px) {
+        margin: 0px 0px 15px 0px;
+    }
+}
+
+.footer-text {
+    font-size: 15px;
+    line-height: 25px;
+    color: #4d4d4d;
+    a {
+        text-decoration: underline;
+        color: #4d4d4d;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    @media (max-width: $md2+px) {
+        text-align: center;
+    }
+}
